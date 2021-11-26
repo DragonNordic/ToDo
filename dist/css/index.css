@@ -1,2 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.45s;
+  font-family: "Nunito", sans-serif;
+  transform: translate3d(0, 0, 0);
+}
 
+html, body {
+  background: #EDF2F4;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1200;
+}
+
+.todo {
+  background: #FFF;
+  width: 22em;
+  height: 30em;
+  box-shadow: 1px 0px 25px #cddbe1;
+  border-radius: 3px;
+}
+.todo__header {
+  background: #3A405A;
+  padding: 1em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.todo__header h1 {
+  color: #FAF9F9;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.4em;
+}
+.todo__header input[type=text] {
+  background: transparent;
+  font-size: 0.9em;
+  font-weight: 300;
+  width: 100%;
+  padding: 0 1.3em;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #FFF;
+}
+.todo__header ::-webkit-input-placeholder, .todo__header :-moz-placeholder, .todo__header :-ms-input-placeholder {
+  color: #fff;
+}
+.todo__content {
+  height: 20em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom: 2em solid #FFF;
+}
+.todo__content h2 {
+  color: #CCC;
+  font-weight: 300;
+  text-align: center;
+  margin: 35% auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 9em;
+  position: absolute;
+}
+.todo__list-item {
+  background: #f3f7f8;
+  height: 4.5em;
+  width: 100%;
+  padding: 1.5em;
+  opacity: 0;
+  vertical-align: middle;
+}
+.todo__list-item p {
+  color: #707aa3;
+  font-size: 0.75em;
+  letter-spacing: 0.015em;
+  float: left;
+  width: 17em;
+  font-weight: 400;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+.todo__list-item:nth-of-type(odd) {
+  background: #e7edf0;
+}
+.todo__list-item i {
+  color: #8f97b7;
+  float: right;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+.todo__list-item i:hover {
+  color: #586189;
+}
+.todo .todo__btn, .todo .todo__btn--delete, .todo .todo__btn--loadList, .todo .todo__btn--save {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #FFF;
+  font-weight: 400;
+  font-size: 0.85em;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.todo .todo__btn:hover, .todo .todo__btn--delete:hover, .todo .todo__btn--loadList:hover, .todo .todo__btn--save:hover {
+  opacity: 1;
+}
+.todo__btn-container {
+  margin: -6.7em 2.2em;
+}
+.todo__btn--save {
+  background: #58A4B0;
+}
+.todo__btn--loadList {
+  background: #E8C547;
+}
+.todo__btn--delete {
+  background: #E56399;
+}
+.todo__footer {
+  border-top: 1px solid #EEE;
+}
+.todo__footer input[type=text] {
+  background: transparent;
+  font-size: 1em;
+  font-weight: 300;
+  width: 100%;
+  height: 6em;
+  padding: 0 1.3em;
+  text-align: left;
+  border: none;
+  outline: none;
+  color: #999;
+}
+
+.shake {
+  -webkit-animation: shake 2s linear;
+  animation: shake 2s linear;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translateX(0px) skew(0deg);
+  }
+  5% {
+    transform: translateX(5px) skew(30deg);
+  }
+  10% {
+    transform: translateX(10px) skew(0deg);
+  }
+  15% {
+    transform: translateX(5px) skew(30deg);
+  }
+  20% {
+    transform: translateX(10px) skew(0deg);
+  }
+  25% {
+    transform: translateX(5px) skew(30deg);
+  }
+  25% {
+    transform: translateX(0px) skew(0deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0px) skew(0deg);
+  }
+  5% {
+    transform: translateX(5px) skew(30deg);
+  }
+  10% {
+    transform: translateX(10px) skew(0deg);
+  }
+  15% {
+    transform: translateX(5px) skew(30deg);
+  }
+  20% {
+    transform: translateX(10px) skew(0deg);
+  }
+  25% {
+    transform: translateX(5px) skew(30deg);
+  }
+  25% {
+    transform: translateX(0px) skew(0deg);
+  }
+}
 /*# sourceMappingURL=index.css.map */
